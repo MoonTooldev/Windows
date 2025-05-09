@@ -1,5 +1,6 @@
 function play_se(){
 	var ala = new Audio('ala.mp3');
+	ala.loop = true;
 	ala.play();
 	navigator.vibrate([200, 100, 200, 100, 200, 100, 200]);
 }
