@@ -30,3 +30,15 @@ $(function(){
 	}, 1000);
 	
 });
+
+function goFullScreen() {
+	let elem = document.documentElement; // ページ全体（<html>要素）
+
+	if (elem.requestFullscreen) {
+		elem.requestFullscreen();
+	} else if (elem.webkitRequestFullscreen) { // Safari用
+		elem.webkitRequestFullscreen();
+	} else if (elem.msRequestFullscreen) { // IE用
+		elem.msRequestFullscreen();
+	}
+}
